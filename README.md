@@ -21,6 +21,9 @@
 #### 認証はDiscordのRedirectsを使ってユーザーを識別してロール付与、サーバーJoinをさせています
 #### 実はあのボタンはURLを踏ませてるだけです笑
 
+![](https://github.com/NaeCqde/Verify_Bot/blob/images/verify_sample-beta.gif)
+
+
 ## セットアップ
 
 ### 1. ライブラリのインストール
