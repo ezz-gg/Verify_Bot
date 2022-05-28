@@ -18,7 +18,7 @@ embed_title = "D0G3H4CK3R Verification" #埋め込みのタイトル
 embed_image_url = "http://ezz.gg/wp-content/uploads/d0g3h4ck3r-Verification.gif" #埋め込みする画像orGif
 embed_description = "下のボタンを押して認証を完了してください" #埋め込みの説明
 button_name = "✅Verify" #認証ボタンの名前
-bot_prefix = "p!"
+bot_prefix = "pv!"
 
 userdata = json.loads(open("data.json", 'r').read())
 app = Flask(__name__)
@@ -41,7 +41,7 @@ def after():
     else:
         return "Failed"
 
-@bot.command(name="verify")
+@bot.command(name="verify-panel")
 async def create_verify(ctx):
         if ctx.author.guild_permissions.administrator:
             embed=discord.Embed(title=embed_title, description=embed_description, color=embed_color)
