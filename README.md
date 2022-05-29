@@ -1,11 +1,11 @@
 <p float="left">
-  <img src="https://github.com/NaeCqde/Verify_Bot/blob/images/d0g3h4ck3r-Verification.gif" width="600" />
-  <img src="https://github.com/NaeCqde/Verify_Bot/blob/images/verify.png" width="400" />
+  <img src="https://github.com/ezz-gg/Verify_Bot/blob/images/d0g3h4ck3r-Verification.gif" width="600" />
+  <img src="https://github.comezz-gg/Verify_Bot/blob/images/verify.png" width="400" />
 </p>
 
 # Discord 認証BOT
 
-![stars](https://img.shields.io/github/stars/NaeCqde/Verify_Bot) ![fork](	https://img.shields.io/github/forks/NaeCqde/Verify_Bot) ![issues](https://img.shields.io/github/issues/NaeCqde/Verify_Bot) ![license](https://img.shields.io/github/license/NaeCqde/Verify_Bot) [![Coverage Status](https://coveralls.io/repos/github/NaeCqde/Verify_Bot/badge.svg?branch=main)](https://coveralls.io/github/NaeCqde/Verify_Bot?branch=main) [🎈HomePage](http://ezz.gg/)
+![stars](https://img.shields.io/github/stars/ezz-gg/Verify_Bot) ![fork](	https://img.shields.io/github/forks/ezz-gg/Verify_Bot) ![issues](https://img.shields.io/github/issues/ezz-gg/Verify_Bot) ![license](https://img.shields.io/github/license/ezz-gg/Verify_Bot) [![Coverage Status](https://coveralls.io/repos/github/ezz-gg/Verify_Bot/badge.svg?branch=main)](https://coveralls.io/github/ezz-gg/Verify_Bot?branch=main) [🎈HomePage](http://ezz.gg/)
 
 #### これはDiscord上にいるPython#6084別名core#3328が作ったものです 僕自身はEmbedと設定項目しかやっていません
 
@@ -20,7 +20,7 @@
 #### 認証はDiscordのRedirectsを使ってユーザーを識別してロール付与、サーバーJoinをさせています
 #### 実はあのボタンはURLを踏ませてるだけです笑
 
-![](https://github.com/NaeCqde/Verify_Bot/blob/images/verify_sample-beta.gif)
+![](https://github.com/ezz-gg/Verify_Bot/blob/images/verify_sample-beta.gif)
 
 
 ## セットアップ
@@ -36,9 +36,11 @@
 ```py -3 -m pip install -U flask requests py-cord --pre```
 
 
-### 2. [```server.py```](https://github.com/NaeCqde/Verify_Bot/blob/main/server.py)の中身をいじる(.env作ってませんスマソ...)
+### 2. [```server.py```](https://github.com/ezz-gg/Verify_Bot/blob/main/server.py)の中身をいじる(.env作ってませんスマソ...)
 
-#### [```server.py```](https://github.com/NaeCqde/Verify_Bot/blob/main/server.py)みて察してください()
+#### [```server-eikyu.py```](https://github.com/ezz-gg/Verify_Bot/blob/main/server-eikyu.py)は連携APPから接続切るまで一生設定したサーバーに入らされます
+
+#### [```server.py```](https://github.com/ezz-gg/Verify_Bot/blob/main/server.py)みて察してください()
 
 ### 察してもわからない内容
 
@@ -96,14 +98,14 @@ bot_prefix = "p!"
 <summary>クリック又はタップで展開</summary>
 <pre>
 <p float="left">
-  <img src="https://github.com/NaeCqde/Verify_Bot/blob/images/Verify_BOT_SETUP_1.png" width="300" />
-  <img src="https://github.com/NaeCqde/Verify_Bot/blob/images/Verify_BOT_SETUP_2.png" width="300" />
-  <img src="https://github.com/NaeCqde/Verify_Bot/blob/images/Verify_BOT_SETUP_3.png" width="600" />
-  <img src="https://github.com/NaeCqde/Verify_Bot/blob/images/Verify_BOT_SETUP_4.png" width="400" />
-  <img src="https://github.com/NaeCqde/Verify_Bot/blob/images/Verify_BOT_SETUP_5.png" width="400" />
-  <img src="https://github.com/NaeCqde/Verify_Bot/blob/images/Verify_BOT_SETUP_6.png" width="700" />
-  <img src="https://github.com/NaeCqde/Verify_Bot/blob/images/Verify_BOT_SETUP_7.png" width="700" />
-  <img src="https://github.com/NaeCqde/Verify_Bot/blob/images/Verify_BOT_SETUP_8.png" width="500" />
+  <img src="https://github.com/ezz-gg/Verify_Bot/blob/images/Verify_BOT_SETUP_1.png" width="300" />
+  <img src="https://github.com/ezz-gg/Verify_Bot/blob/images/Verify_BOT_SETUP_2.png" width="300" />
+  <img src="https://github.com/ezz-gg/Verify_Bot/blob/images/Verify_BOT_SETUP_3.png" width="600" />
+  <img src="https://github.com/ezz-gg/Verify_Bot/blob/images/Verify_BOT_SETUP_4.png" width="400" />
+  <img src="https://github.com/ezz-gg/Verify_Bot/blob/images/Verify_BOT_SETUP_5.png" width="400" />
+  <img src="https://github.com/ezz-gg/Verify_Bot/blob/images/Verify_BOT_SETUP_6.png" width="700" />
+  <img src="https://github.com/ezz-gg/Verify_Bot/blob/images/Verify_BOT_SETUP_7.png" width="700" />
+  <img src="https://github.com/ezz-gg/Verify_Bot/blob/images/Verify_BOT_SETUP_8.png" width="500" />
 </p>
 </pre>
 </details>
