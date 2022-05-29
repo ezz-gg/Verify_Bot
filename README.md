@@ -64,7 +64,7 @@
 <code>
 token = "" #BOTトークン
 client_id =  #BOTのクライアントID
-client_secret = "ひかひかisごっと" #BOTのクライアントシークレット
+client_secret = "" #BOTのクライアントシークレット
 url = "" #URL Generatorでidentifyとguilds.joinを指定して作られたURLを貼る
 role_id =  #認証後の付与するロールのID
 guild_id =  #認証する場所のサーバーID
