@@ -18,11 +18,15 @@ embed_title = "D0G3H4CK3R Verification" #埋め込みのタイトル
 embed_image_url = "http://ezz.gg/wp-content/uploads/d0g3h4ck3r-Verification.gif" #埋め込みする画像orGif
 embed_description = "下のボタンを押して認証を完了してください" #埋め込みの説明
 button_name = "✅Verify" #認証ボタンの名前
-bot_prefix = "pv!"
+bot_prefix = "p!" #BOTプレフィックス
 
 userdata = json.loads(open("data.json", 'r').read())
 app = Flask(__name__)
-bot = commands.Bot(command_prefix=bot_prefix, intents=discord.Intents.all())
+intents = disnake.Intents.default()
+intents.members = True
+intents.message_content = True
+intents.presences = True
+bot = commands.Bot(command_prefix=bot_prefix, guilds=[guild_id], sync_commands_debug=True, intents=intents)
 
 @app.route("/after")
 def after():
@@ -41,13 +45,29 @@ def after():
     else:
         return "Failed"
 
-@bot.command(name="verify-panel")
+@bot.slash_command(description="認証パネルを出します", guild_ids=[guild_id], dm_permission=False, default_member_permissions=disnake.Permissions(manage_guild=True, moderate_members=True))
+async def verifypanel(inter: disnake.ApplicationCommandInteraction):
+        embed = disnake.Embed(
+            title=embed_title,
+            description=embed_description,
+            color=embed_color
+        )
+        embed.set_image(url=embed_image_url)
+        view = disnake.ui.View()
+        view.add_item(disnake.ui.Button(label=button_name, style=disnake.ButtonStyle.link, url=url))
+        await inter.response.send_message(embed=embed, view=view)
+
+@bot.command(name="verifypanel")
 async def create_verify(ctx):
         if ctx.author.guild_permissions.administrator:
-            embed=discord.Embed(title=embed_title, description=embed_description, color=embed_color)
+            embed = disnake.Embed(
+                title=embed_title,
+                description=embed_description,
+                color=embed_color
+            )
             embed.set_image(url=embed_image_url)
-            view = discord.ui.View()
-            view.add_item(discord.ui.Button(label=button_name, style=discord.ButtonStyle.link, url=url))
+            view = disnake.ui.View()
+            view.add_item(disnake.ui.Button(label=button_name, style=disnake.ButtonStyle.link, url=url))
             await ctx.send(embed=embed, view=view)
 
 def update():
