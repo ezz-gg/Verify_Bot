@@ -1,6 +1,6 @@
 <p float="left">
   <img src="https://github.com/ezz-gg/Verify_Bot/blob/images/d0g3h4ck3r-Verification.gif" width="600" />
-  <img src="https://github.comezz-gg/Verify_Bot/blob/images/verify.png" width="400" />
+  <img src="https://github.com/ezz-gg/Verify_Bot/blob/images/verify.png" width="400" />
 </p>
 
 # Discord 認証BOT
