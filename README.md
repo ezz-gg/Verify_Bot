@@ -29,11 +29,11 @@
 
 ##### Linux
 
-```python3 -m pip install -U flask requests py-cord --pre```
+```python3 -m pip install -U flask requests disnake```
 
 ##### Windows
 
-```py -3 -m pip install -U flask requests py-cord --pre```
+```py -3 -m pip install -U flask requests disnake```
 
 
 ### 2. [```server.py```](https://github.com/ezz-gg/Verify_Bot/blob/main/server.py)の中身をいじる(.env作ってませんスマソ...)
@@ -50,11 +50,11 @@
 
 #### 1つのサーバーじゃなくて2つ以上のサーバーに入れたくなったら
 
-##### 12,35,60行目のコメント化を解除してください
+##### 12,39,80行目のコメント化を解除してください
 
 ##### 12行目の```join_guild_2 = ```は```= serverid```としてください
 
-#### もし3つ以上増やしたくなったら12.35.60を増やしてください やり方は察してください
+#### もし3つ以上増やしたくなったら12.39.80を増やしてください やり方は察してください
 
 #### ↓ ```server.py```の設定 ↓
 
@@ -69,7 +69,7 @@ url = "" #URL Generatorでidentifyとguilds.joinを指定して作られたURL�
 role_id =  #認証後の付与するロールのID
 guild_id =  #認証する場所のサーバーID
 join_guild_id_1 =  #新しく入らされるサーバーのID1
-# join_guild_id_2 =  #新しく入らされるサーバーのID2
+join_guild_id_2 =  #新しく入らされるサーバーのID2
 redirect_uri = "" #これはアカウントにアクセス与えた後の転送先 Pyをホストしているやつに向かせる Discord Dev Redirectで http://DomainOrIP:指定したPort/after に設定する
 redirect_to = "http://ezz.gg/verify_success/" #redirect_uriのあと「認証成功したよ」とか表示させればいいページ
 site_port = 8080 #リクエスト結果表示ページのポート(Disord Devのリダイレクトに設定したポート)
@@ -87,6 +87,18 @@ bot_prefix = "p!"
 ### 3. 起動
 
 ```Python3 server.py```
+
+#### ↑Linux Windows↓
+
+```py -3 server.py```
+
+#### 使い方 
+
+ロール付与したいサーバーで運営が ```p!verifypanely``` と送信する
+
+```/verifypanel``` でもいいですが「```○○さんが/verifypanelを使用しました```」って上にでてダサいからPrefixCommand推奨(上のやつ)
+
+そうすると一番上にあるようなパネルが出ます
 
 ##### data.jsonの初期状態
 
