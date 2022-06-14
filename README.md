@@ -93,6 +93,7 @@ bot_prefix=pv!
 #### ↑Linux Windows↓
 
 ```py -3 server.py```
+
 ### 4.ポート開放できない泣の人へ 番外編
 
 #### Cloudflaredやngrokを使おう！！
@@ -101,7 +102,7 @@ bot_prefix=pv!
 
 ##### セットアップは調べて
 
-```ngrok http 8080(.envで指定したポート)```
+```ngrok http 8080(.envで指定したポート) --region jp(--region jpは日本にあったら一応しといたらいいと思います)```
 
 #### Cloudflared(自分のcloudflareにあるドメインと紐づけできます(おすすめ))
 
