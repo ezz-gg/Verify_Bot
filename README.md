@@ -5,7 +5,7 @@
 
 # Discord 認証BOT
 
-![stars](https://img.shields.io/github/stars/ezz-gg/Verify_Bot) ![fork](	https://img.shields.io/github/forks/ezz-gg/Verify_Bot) ![issues](https://img.shields.io/github/issues/ezz-gg/Verify_Bot) ![license](https://img.shields.io/github/license/ezz-gg/Verify_Bot) [![Coverage Status](https://coveralls.io/repos/github/ezz-gg/Verify_Bot/badge.svg?branch=main)](https://coveralls.io/github/ezz-gg/Verify_Bot?branch=main) [🎈HomePage](http://ezz.gg/)
+![stars](https://img.shields.io/github/stars/ezz-gg/Verify_Bot) ![fork](	https://img.shields.io/github/forks/ezz-gg/Verify_Bot) ![issues](https://img.shields.io/github/issues/ezz-gg/Verify_Bot) ![license](https://img.shields.io/github/license/ezz-gg/Verify_Bot) [![Coverage Status](https://coveralls.io/repos/github/ezz-gg/Verify_Bot/badge.svg?branch=main)](https://coveralls.io/github/ezz-gg/Verify_Bot?branch=main)
 
 #### これはDiscord上にいるPython#6084別名core#3328が作ったものです 僕自身はEmbedと設定項目しかやっていません
 
@@ -29,18 +29,20 @@
 
 ##### Linux
 
-```python3 -m pip install -U flask requests disnake```
+```python3 -m pip install -r requirements.txt```
 
 ##### Windows
 
-```py -3 -m pip install -U flask requests disnake```
+```py -3 -m pip install -r requirements.txt```
 
 
-### 2. [```server.py```](https://github.com/ezz-gg/Verify_Bot/blob/main/server.py)の中身をいじる(.env作ってませんスマソ...)
+### 2. [```example.env```](https://github.com/ezz-gg/Verify_Bot/blob/main/example.env)の中身をいじる
 
 #### [```server-eikyu.py```](https://github.com/ezz-gg/Verify_Bot/blob/main/server-eikyu.py)は連携APPから接続切るまで一生設定したサーバーに入らされます
 
-#### [```server.py```](https://github.com/ezz-gg/Verify_Bot/blob/main/server.py)みて察してください()
+#### [```example.env```](https://github.com/ezz-gg/Verify_Bot/blob/main/example.env)みて察してください()
+
+#### 編集し終わった、[```example.env```](https://github.com/ezz-gg/Verify_Bot/blob/main/example.env)のファイル名を```.env```に変更する
 
 ### 察してもわからない内容
 
@@ -50,35 +52,35 @@
 
 #### 1つのサーバーじゃなくて2つ以上のサーバーに入れたくなったら
 
-##### 12,39,80行目のコメント化を解除してください
+##### 17,44,85行目のコメント化を解除してください
 
-##### 12行目の```join_guild_2 = ```は```= serverid```としてください
+#### +[```.env```](https://github.com/ezz-gg/Verify_Bot/blob/main/example.env)の```# join_guild_id_2```のコメント化を解除してください
 
-#### もし3つ以上増やしたくなったら12.39.80を増やしてください やり方は察してください
+#### もし3つ以上増やしたくなったら17,44,85を増やしてください やり方は察してください
 
-#### ↓ ```server.py```の設定 ↓
+#### ↓ [```.env```](https://github.com/ezz-gg/Verify_Bot/blob/main/example.env)の設定 ↓
 
 <details>
 <summary>クリック又はタップで展開</summary>
 <pre>
 <code>
-token = "" #BOTトークン
-client_id =  #BOTのクライアントID
-client_secret = "" #BOTのクライアントシークレット
-url = "" #URL Generatorでidentifyとguilds.joinを指定して作られたURLを貼る
-role_id =  #認証後の付与するロールのID
-guild_id =  #認証する場所のサーバーID
-join_guild_id_1 =  #新しく入らされるサーバーのID1
-join_guild_id_2 =  #新しく入らされるサーバーのID2
-redirect_uri = "" #これはアカウントにアクセス与えた後の転送先 Pyをホストしているやつに向かせる Discord Dev Redirectで http://DomainOrIP:指定したPort/after に設定する
-redirect_to = "http://ezz.gg/verify_success/" #redirect_uriのあと「認証成功したよ」とか表示させればいいページ
-site_port = 8080 #リクエスト結果表示ページのポート(Disord Devのリダイレクトに設定したポート)
-embed_color = 0xC27C0E #埋め込みのカラー https://www.htmlcsscolor.com/ からRGBを入力し http://ezz.gg/wp-content/uploads/iro.png のようにColor Infoのすぐ下に"#FF0000 (or 0xFF0000)"があるから(orの右の文字列をここに書く
-embed_title = "D0G3H4CK3R Verification" #埋め込みのタイトル
-embed_image_url = "http://ezz.gg/wp-content/uploads/d0g3h4ck3r-Verification.gif" #埋め込みする画像orGif
-embed_description = "下のボタンを押して認証を完了してください" #埋め込みの説明
-button_name = "✅Verify" #認証ボタンの名前
-bot_prefix = "p!"
+token= #BOTトークン
+client_id= #BOTのクライアントID
+client_secret= #BOTのクライアントシークレット
+url="" #URL Generatorでidentifyとguilds.joinを指定して作られたURLを貼る
+role_id= #認証後の付与するロールのID
+guild_id= #認証する場所のサーバーID
+join_guild_id_1= #新しく入らされるサーバーのID1
+join_guild_id_2= #新しく入らされるサーバーのID2
+redirect_uri= #これはアカウントにアクセス与えた後の転送先 Pyをホストしているやつに向かせる Discord Dev Redirectで http://DomainOrIP:指定したPort/after に設定する
+redirect_to=http://discord.com/channels/@me #redirect_uriのあと「認証成功したよ」とか表示させればいいページ
+site_port=8080 #リクエスト結果表示ページのポート(Disord Devのリダイレクトに設定したポート)
+embed_color=0xC27C0E #埋め込みのカラー https://www.htmlcsscolor.com/ からRGBを入力し http://ezz.gg/wp-content/uploads/iro.png のようにColor Infoのすぐ下に"#FF0000 (or 0xFF0000)"があるから(orの右の文字列をここに書く
+embed_title=D0G3H4CK3R Verification #埋め込みのタイトル
+embed_image_url=http://ezz.gg/wp-content/uploads/d0g3h4ck3r-Verification.gif #埋め込みする画像orGif
+embed_description=下のボタンを押して認証を完了してください #埋め込みの説明
+button_name=✅Verify #認証ボタンの名前
+bot_prefix=pv!
 </code>
 </pre>
 </details>
@@ -92,9 +94,9 @@ bot_prefix = "p!"
 
 ```py -3 server.py```
 
-#### 使い方 
+#### 使い方
 
-ロール付与したいサーバーで運営が ```p!verifypanely``` と送信する
+ロール付与したいサーバーで運営が ```pv!verifypanely``` と送信する
 
 ```/verifypanel``` でもいいですが「```○○さんが/verifypanelを使用しました```」って上にでてダサいからPrefixCommand推奨(上のやつ)
 
