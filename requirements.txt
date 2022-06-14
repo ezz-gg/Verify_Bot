@@ -2,3 +2,4 @@ disnake
 flask
 asyncio
 requests
+python-dotenv

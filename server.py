@@ -1,24 +1,29 @@
 from flask import Flask, request, redirect
-import discord, asyncio, requests, datetime, json, threading
-from discord.ext import commands
+import disnake, asyncio, requests, datetime, json, threading, os
+from disnake.ext import commands
+from os.path import join, dirname
+from dotenv import load_dotenv
 
-token = "" #BOTトークン
-client_id =  #BOTのクライアントID
-client_secret = "" #BOTのクライアントシークレット
-url = "" #URL Generatorでidentifyとguilds.joinを指定して作られたURLを貼る
-role_id =  #認証後の付与するロールのID
-guild_id =  #認証する場所のサーバーID
-join_guild_id_1 =  #新しく入らされるサーバーのID1
-# join_guild_id_2 =  #新しく入らされるサーバーのID2
-redirect_uri = "" #これはアカウントにアクセス与えた後の転送先 Pyをホストしているやつに向かせる Discord Dev Redirectで http://DomainOrIP:指定したPort/after に設定する
-redirect_to = "http://ezz.gg/verify_success/" #redirect_uriのあと「認証成功したよ」とか表示させればいいページ
-site_port = 8080 #リクエスト結果表示ページのポート(Disord Devのリダイレクトに設定したポート)
-embed_color = 0xC27C0E #埋め込みのカラー https://www.htmlcsscolor.com/ からRGBを入力し http://ezz.gg/wp-content/uploads/iro.png のようにColor Infoのすぐ下に"#FF0000 (or 0xFF0000)"があるから(orの右の文字列をここに書く
-embed_title = "D0G3H4CK3R Verification" #埋め込みのタイトル
-embed_image_url = "http://ezz.gg/wp-content/uploads/d0g3h4ck3r-Verification.gif" #埋め込みする画像orGif
-embed_description = "下のボタンを押して認証を完了してください" #埋め込みの説明
-button_name = "✅Verify" #認証ボタンの名前
-bot_prefix = "p!" #BOTプレフィックス
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
+token = os.environ.get("token")
+client_id = os.environ.get("client_id")
+client_secret = os.environ.get("client_secret")
+url = os.environ.get("url")
+role_id = os.environ.get("role_")
+guild_id = os.environ.get("guild_id")
+join_guild_id_1 = os.environ.get("join_guild_id_1")
+# join_guild_id_2 =  os.environ.get("join_guild_id_2")
+redirect_uri = os.environ.get("redirect_uri")
+redirect_to = os.environ.get("redirect_to")
+site_port = os.environ.get("site_port")
+embed_color = os.environ.get("embed_color")
+embed_title = os.environ.get("embed_title")
+embed_image_url = os.environ.get("embed_image_url")
+embed_description = os.environ.get("embed_description")
+button_name = os.environ.get("button_name")
+bot_prefix = os.environ.get("bot_prefix")
 
 userdata = json.loads(open("data.json", 'r').read())
 app = Flask(__name__)
