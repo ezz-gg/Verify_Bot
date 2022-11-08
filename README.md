@@ -14,6 +14,8 @@
 ## 注意点
 ### herokuやrailway、mogeniusを使うのはおすすめしません
 ### deployするときにdata.jsonの内容が消えてしまいます
+### もじ他vpsや自宅サーバーがない場合は上記のvpsで
+### [このプロジェクト](https://github.com/ezz-gg/gdrive-api-verify)を使ってください
 
 ## kwsk
 
