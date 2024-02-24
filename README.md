@@ -14,8 +14,8 @@
 ## 注意点
 ### herokuやrailway、mogeniusを使うのはおすすめしません
 ### deployするときにdata.jsonの内容が消えてしまいます
-### もじ他vpsや自宅サーバーがない場合は上記のvpsで
-### [このプロジェクト](https://github.com/ezz-gg/gdrive-api-verify)を使ってください
+### もし他vpsや自宅サーバーがない場合は上記のvpsで
+### このレポジトリは同期版です非同期版の[このプロジェクト](https://github.com/ezz-gg/gdrive-api-verify)を使ってください、
 
 ## kwsk
 
@@ -93,7 +93,7 @@ bot_prefix=pv!
 
 ### 3. 起動
 
-```Python3 server.py```
+```python3 server.py```
 
 #### ↑Linux Windows↓
 
@@ -101,7 +101,7 @@ bot_prefix=pv!
 
 ### 4.ポート開放できない泣の人へ 番外編
 
-#### Cloudflaredやngrokを使おう！！
+#### Cloudflaredやngrokを使おう！！（dynamic dns系）
 
 #### Ngrok
 
@@ -114,7 +114,6 @@ bot_prefix=pv!
 ##### またまたセットアップは調べて
 
 ```cloudflared tunnel --url 0.0.0.0(or localhost):8080(.envで指定したポート)```
-
 #### 使い方
 
 ロール付与したいサーバーで運営が ```pv!verifypanely``` と送信する
